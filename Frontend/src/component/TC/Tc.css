@@ -1,0 +1,161 @@
+/* ========================= */
+/* Global Section Layout     */
+/* ========================= */
+.tc-section {
+  width: 100%;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: "Poppins", sans-serif;
+  padding: 60px 20px;
+}
+
+.tc-content {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ========================= */
+/* Main Headings             */
+/* ========================= */
+/* === Main Page Heading (Terms and Conditions) === */
+.tc-heading {
+  text-align: center;
+  font-size: 40px;         /* slightly larger */
+  font-weight: 800;
+  color: #b71c1c;          /* bold deep red */
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;            /* remove underline */
+  display: block;          /* full width to stay centered */
+  padding-bottom: 0;       /* remove bottom spacing */
+}
+
+/* ========================= */
+/* Terms & Condition Items   */
+/* ========================= */
+.tc-item {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tc-item:last-child {
+  border-bottom: none;
+}
+
+/* Sub Headings (Titles) */
+.tc-item h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.tc-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 20px 0 8px;
+  font-weight: 500;
+}
+
+/* Text & Lists */
+.tc-item p,
+.tc-item li {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.tc-item ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.tc-item li {
+  margin-bottom: 6px;
+}
+
+/* ========================= */
+/* SMS Terms & Conditions    */
+/* ========================= */
+
+/* BIGGEST MAIN HEADING */
+.tc-item h2.sms-title {
+  font-size: 40px;              /* 🔥 Bigger than all other titles */
+  color: #b71c1c;
+  font-weight: 800;
+  text-align: center;
+  margin: 80px 0 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #b71c1c;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* SMS Subtitles (like “1. SMS Consent Communication”) */
+.sms-item h3 {
+  font-size: 22px;              /* same as other titles */
+  color: #0d47a1;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* SMS Content Paragraphs */
+.sms-item p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* SMS Lists */
+.sms-item ul {
+  margin-left: 25px;
+  list-style: disc;
+  color: #444;
+}
+
+/* Example Box */
+.sms-example {
+  background: #f9f9f9;
+  border-left: 4px solid #c62828;
+  padding: 12px 16px;
+  border-radius: 6px;
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* ========================= */
+/* Responsive Design         */
+/* ========================= */
+@media (max-width: 900px) {
+  .tc-content {
+    width: 90%;
+  }
+
+  .tc-heading {
+    font-size: 26px;
+  }
+
+  .tc-item h2.sms-title {
+    font-size: 30px; /* still bigger than others */
+  }
+
+  .tc-item p,
+  .tc-item li,
+  .sms-item p {
+    font-size: 16px;
+  }
+}
+.tc-heading-sub{
+  font-size: 42px !important;
+  color: black !important;
+}

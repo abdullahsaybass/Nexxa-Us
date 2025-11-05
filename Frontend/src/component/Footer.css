@@ -1,0 +1,140 @@
+/* ===== FOOTER LAYOUT ===== */
+.footer {
+  background-color: #2a2a2a;
+  color: #9ca3af;
+  padding: 2rem 0 0.75rem;
+  font-size: 0.75rem; /* Reduced base font size */
+}
+
+.footer-container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ===== TITLES & TEXT ===== */
+.footer-title {
+  color: #fff;
+  font-size: 1rem; /* smaller than before */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text {
+  font-size: 0.7rem; /* smaller body text */
+  line-height: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-label {
+  font-weight: 600;
+  color: #d1d5db;
+  font-size: 0.7rem;
+}
+
+/* ===== LISTS ===== */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.25rem;
+}
+
+.footer-list li a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.7rem; /* smaller links */
+  transition: color 0.3s ease;
+}
+
+.footer-list li a:hover {
+  color: #ffffff;
+}
+
+/* ===== FORM ===== */
+.footer-form {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.footer-input {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 0.125rem 0 0 0.125rem;
+  border: none;
+  outline: none;
+}
+
+.footer-btn {
+  background-color: #dc2626;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  border-radius: 0 0.125rem 0.125rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.footer-socials {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.footer-socials a {
+  background-color: #4b5563;
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: #dc2626;
+}
+
+.footer-socials a svg {
+  font-size: 0.65rem; /* smaller icons */
+}
+
+/* ===== BOTTOM FOOTER ===== */
+.footer-bottom {
+  border-top: 1px solid #374151;
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  text-align: center;
+  font-size: 0.65rem; /* smaller bottom text */
+  color: #6b7280;
+}
+
+.footer-highlight {
+  color: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

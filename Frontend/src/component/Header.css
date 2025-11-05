@@ -1,0 +1,345 @@
+/* === HEADER === */
+.header {
+  width: 100%;
+  font-family: sans-serif;
+  color: #1f2937;
+}
+
+/* === LOGO === */
+.header-logo {
+  height: 160px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* === TOP BAR === */
+.top-bar {
+  background-color: #e53935;
+  color: white;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.top-bar-inner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.top-left,
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 11px;
+  flex-wrap: wrap;
+}
+
+.top-left a {
+  text-decoration: none;
+  color: white;
+}
+
+.top-left a:hover {
+  text-decoration: underline;
+}
+
+/* === MIDDLE SECTION === */
+.middle-section {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  position: relative;
+}
+
+.middle-inner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* LEFT MENU */
+.left-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 12px;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #dc2626;
+}
+
+/* === CENTER SECTION === */
+.center-section {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* === RIGHT ICONS === */
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-left: auto;
+}
+
+.info-btn {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.info-btn:hover {
+  color: #dc2626;
+}
+
+/* === TABLET VIEW (≤ 1024px) === */
+/* === TABLET / SMALL LAPTOP (≤ 1024px) === */
+@media (max-width: 1024px) {
+  /* Use slightly wider container on tablet */
+  .top-bar-inner,
+  .middle-inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Keep header in a single row on tablet — no column stacking */
+  .middle-inner {
+    display: flex;
+    flex-direction: row;      /* important: row, not column */
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;       /* prevent the right icons from wrapping below */
+  }
+
+  /* left menu (hamburger + nav) — keep small and fixed */
+  .left-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 auto;          /* do not expand */
+  }
+
+  .nav-links {
+    display: none;           /* hide full nav on tablet if desired; remove if you want it visible */
+  }
+
+  /* center logo — keep static and centered visually */
+  .center-section {
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;          /* width based on logo size, won't push other items */
+  }
+
+  /* right icons / sidebar — keep fixed width so it won't push */
+  .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 0 0 auto;          /* do not let this expand */
+    margin-left: 0;
+  }
+
+  /* scale logo and text down */
+  .header-logo {
+    height: 120px;
+    max-width: 220px;
+  }
+
+  .menu-btn {
+    font-size: 20px;
+  }
+
+  .info-btn {
+    font-size: 11px;
+  }
+}
+
+/* === MOBILE VIEW (≤ 768px) === */
+@media (max-width: 768px) {
+  /* Hide desktop-only elements */
+  .top-bar,
+  .nav-links,
+  .right-icons {
+    display: none !important;
+  }
+
+  /* Middle section simplified */
+  .middle-section {
+    padding: 10px 16px;
+  }
+
+  .middle-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* hamburger left, logo right */
+    align-items: center;
+  }
+
+  /* Hamburger */
+  .mobile-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+  }
+
+  .menu-btn {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #1f2937;
+    cursor: pointer;
+  }
+
+  /* Logo on right */
+  .center-section {
+    position: static !important;
+    transform: none !important;
+    margin: 0;
+   
+   
+  }
+
+  .header-logo {
+    height: 120px !important;
+    width: auto;
+  }
+}
+
+/* === SMALL MOBILE (≤ 480px) === */
+@media (max-width: 480px) {
+  .header-logo {
+    height: 55px;
+  }
+
+  .menu-btn {
+    font-size: 24px;
+  }
+
+  .middle-section {
+    padding: 6px 12px;
+  }
+}
+
+/* === MOBILE MENU === */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1050;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  z-index: 1100;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-nav {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.mobile-nav li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.mobile-nav a {
+  color: #1f2937;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.mobile-nav a:hover {
+  color: #dc2626;
+}
+
+.mobile-footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+}

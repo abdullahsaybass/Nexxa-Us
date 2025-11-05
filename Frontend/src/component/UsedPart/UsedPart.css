@@ -1,0 +1,154 @@
+/* === MAIN CONTAINER === */
+.user-parts {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* === SECTION 1 === */
+.user-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.user-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.user-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* === FLEX CONTAINER: CONTENT LEFT + IMAGE + SIDEBAR RIGHT === */
+.flex-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 120px; /* space between content and right side */
+}
+
+/* === LEFT SIDE (75%) === */
+.user-contents {
+  width: 65%;
+}
+
+.user-lower-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.user-lower-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* === RIGHT SIDE (25%): IMAGE + SIDEBAR === */
+.sidebar-section {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; /* ensures sidebar fills width */
+  gap: 25px; /* space between image and sidebar */
+}
+
+/* === IMAGE (TOP RIGHT) === */
+.user-image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.user-image img:hover {
+  transform: scale(1.05);
+}
+
+/* === SIDEBAR (BOTTOM RIGHT) === */
+.sidebar {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 350px;
+  position: relative;
+  display: block;
+}
+
+.sidebar .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #e63946;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .flex-sections {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .user-contents,
+  .sidebar-section {
+    width: 100%;
+  }
+
+  .user-image {
+    justify-content: center;
+  }
+
+  .user-image img {
+    max-width: 250px;
+  }
+}

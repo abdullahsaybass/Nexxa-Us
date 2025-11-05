@@ -1,0 +1,59 @@
+/* ========================= */
+/* Section Full Width        */
+/* ========================= */
+.privacy-section {
+  width: 100%;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: "Poppins", sans-serif;
+  padding: 60px 0;
+}
+
+/* ========================= */
+/* Inner Content (80%)       */
+/* ========================= */
+.privacy-content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ========================= */
+/* Headings & Text           */
+/* ========================= */
+.privacy-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #e53935;
+  margin-bottom: 40px;
+}
+
+.privacy-item {
+  margin-bottom: 30px;
+}
+
+.privacy-item h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.privacy-item p,
+.privacy-item li {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.privacy-item ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .privacy-content {
+    width: 90%;
+  }
+}
