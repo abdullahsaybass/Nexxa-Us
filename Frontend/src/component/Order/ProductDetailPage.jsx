@@ -61,7 +61,7 @@ export default function ProductDetailPage() {
       console.log(" Inquiry stored with ID:", docRef.id);
 
       
-      const response = await axios.post("https://nexxa-new.vercel.app/send-email", {
+      const response = await axios.post("http://localhost:5000/send-email", {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,

@@ -1356,7 +1356,7 @@ const partsData = [
             "Used Toyota Yaris Parts"
         ],
         content3:"Thank you for visiting nexxaauto.com where we can help you find quality used Toyota auto parts. Are you looking for a junkyard near you that sells quality used Toyota parts? We have all the tools right here on nexxaauto.com for you to do this. We have thousands of junkyards in our system that has a very large inventory of used auto parts for cars and trucks. We guarantee to have the best prices for any used Toyota parts including used Toyota engines, transmissions, brake parts, body, and suspension parts as well.",
-        img: suzuki,
+        
     },
 
     {

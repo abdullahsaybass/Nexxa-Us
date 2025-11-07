@@ -8,14 +8,26 @@ import {
 } from "react-icons/hi2";
 
 export default function ContactPopup() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true); // popup starts open
+  const [closedOnce, setClosedOnce] = useState(false); // track if user closed once
+
+  const handleToggle = () => {
+    if (open) {
+      setClosedOnce(true);
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
+  };
 
   return (
     <>
-      {/* Floating Chat Button */}
-      <button className="floating-btn" onClick={() => setOpen(!open)}>
+      {/* Floating Button */}
+      <button className="floating-btn" onClick={handleToggle}>
         {open ? (
           <HiOutlineXMark size={24} />
+        ) : closedOnce ? (
+          <HiOutlinePhone size={24} />
         ) : (
           <HiOutlineChatBubbleLeftRight size={24} />
         )}
@@ -29,7 +41,7 @@ export default function ContactPopup() {
             <p>Contact Part Expert Now</p>
 
             <a href="tel:+1 (888) 266-0007" className="phone">
-              +1&nbsp;877&nbsp;314-1621
+              +1&nbsp;(877)&nbsp;266&nbsp;0007
             </a>
 
             <div className="popup-buttons">

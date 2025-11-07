@@ -14,6 +14,7 @@ import Warranty from "./component/Warrenty/Warranty.jsx";
 import UsedPart from "./component/UsedPart/UsedPart.jsx";
 import Header from "./component/Header.jsx";
 import Footer from "./component/Footer.jsx";
+import ThankYou from "./component/ThankYou.jsx";
 // ✅ Scroll instantly to top (no animation flicker)
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ function App() {
         <Route path="/warranty" element={<Warranty />} />
         <Route path="/request-a-parts" element={<Home />} />
         <Route path="/used-auto-parts/:partName" element={<UsedPart />} />
+        <Route path="/thank-you" element={<ThankYou />} />
 
       </Routes>
       <ContactPopup />
