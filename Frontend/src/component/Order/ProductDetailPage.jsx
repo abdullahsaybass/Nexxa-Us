@@ -61,7 +61,7 @@ export default function ProductDetailPage() {
       console.log(" Inquiry stored with ID:", docRef.id);
 
       
-      const response = await axios.post("http://74.208.158.237/send-email", {
+      const response = await axios.post("http://74.208.158.237:5000", {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
